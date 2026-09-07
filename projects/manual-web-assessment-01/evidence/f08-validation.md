@@ -1,30 +1,23 @@
 # F-08 Technical Validation
 
-> Sanitized reconstruction. The original authentication endpoint, tested account, timing, attempt count, and environment-specific thresholds are intentionally not reproduced.
+> Sanitized reconstruction. The original authentication route, parameter names, tested account, attempt count, timing, and environment-specific thresholds are intentionally not reproduced.
 
 ## Repeated authentication sequence
 
-Representative requests were submitted in sequence using invalid credentials:
+Representative authentication requests were submitted in sequence using invalid credentials:
 
 ```http
-POST /login HTTP/1.1
+POST / HTTP/1.1
 Host: app.example.test
 Content-Type: application/x-www-form-urlencoded
 
-username=test-user&password=[invalid-value]
+action=login&username=[test-user]&credential=[invalid-value]&state=[redacted]
 ```
 
-Representative response:
+The application returned its normal authentication-failure behavior and continued to process subsequent attempts.
 
-```http
-HTTP/1.1 401 Unauthorized
-Content-Type: application/json
-
-{"error":"invalid credentials"}
-```
-
-Across the tested sequence, the application continued to accept authentication attempts without an effective server-side response such as material throttling, progressive delay, temporary blocking, or an equivalent control.
+Across the controlled sequence, no effective server-side response materially interrupted sustained guessing activity through throttling, progressive delay, temporary blocking, or an equivalent control.
 
 ## Security conclusion
 
-The finding is based on the absence of an effective control during a controlled repeated-attempt test, not merely on the absence of a visible CAPTCHA.
+The finding is based on the absence of an effective control during repeated authentication attempts, not merely on the absence of a visible CAPTCHA or a particular user-interface mechanism.
