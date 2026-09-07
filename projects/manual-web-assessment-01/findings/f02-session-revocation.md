@@ -1,6 +1,10 @@
 # F-02 Session Revocation Failure
 
-**Status:** Confirmed
+| Field | Value |
+| --- | --- |
+| Status | Confirmed |
+| CWE | CWE-613: Insufficient Session Expiration |
+| OWASP Top 10 | A07:2025 Authentication Failures |
 
 ## Summary
 

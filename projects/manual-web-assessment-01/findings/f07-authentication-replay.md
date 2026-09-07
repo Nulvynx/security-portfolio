@@ -1,6 +1,10 @@
 # F-07 Authentication Replay
 
-**Status:** Confirmed
+| Field | Value |
+| --- | --- |
+| Status | Confirmed |
+| CWE | CWE-294: Authentication Bypass by Capture-replay |
+| OWASP Top 10 | A07:2025 Authentication Failures |
 
 ## Summary
 

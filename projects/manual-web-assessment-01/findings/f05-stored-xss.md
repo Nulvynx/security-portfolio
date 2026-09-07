@@ -1,6 +1,10 @@
 # F-05 Stored Cross-Site Scripting
 
-**Status:** Confirmed
+| Field | Value |
+| --- | --- |
+| Status | Confirmed |
+| CWE | CWE-79: Improper Neutralization of Input During Web Page Generation |
+| OWASP Top 10 | A05:2025 Injection |
 
 ## Summary
 

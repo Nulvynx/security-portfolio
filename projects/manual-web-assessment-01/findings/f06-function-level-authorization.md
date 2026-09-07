@@ -1,6 +1,10 @@
 # F-06 Missing Function-Level Authorization
 
-**Status:** Confirmed
+| Field | Value |
+| --- | --- |
+| Status | Confirmed |
+| CWE | CWE-862: Missing Authorization |
+| OWASP Top 10 | A01:2025 Broken Access Control |
 
 ## Summary
 

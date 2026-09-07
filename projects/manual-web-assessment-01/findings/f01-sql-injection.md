@@ -1,6 +1,10 @@
 # F-01 Boolean-Based SQL Injection
 
-**Status:** Confirmed
+| Field | Value |
+| --- | --- |
+| Status | Confirmed |
+| CWE | CWE-89: Improper Neutralization of Special Elements used in an SQL Command |
+| OWASP Top 10 | A05:2025 Injection |
 
 ## Summary
 

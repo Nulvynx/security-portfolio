@@ -1,6 +1,10 @@
 # F-04 Exposed Diagnostic Endpoint
 
-**Status:** Confirmed
+| Field | Value |
+| --- | --- |
+| Status | Confirmed |
+| CWE | CWE-489: Active Debug Code |
+| OWASP Top 10 | A02:2025 Security Misconfiguration |
 
 ## Summary
 

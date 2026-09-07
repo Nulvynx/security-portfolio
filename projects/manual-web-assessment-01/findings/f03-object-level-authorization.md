@@ -1,6 +1,10 @@
 # F-03 Broken Object-Level Authorization
 
-**Status:** Confirmed
+| Field | Value |
+| --- | --- |
+| Status | Confirmed |
+| CWE | CWE-639: Authorization Bypass Through User-Controlled Key |
+| OWASP Top 10 | A01:2025 Broken Access Control |
 
 ## Summary
 

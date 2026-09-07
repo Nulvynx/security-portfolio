@@ -1,6 +1,10 @@
 # F-08 Insufficient Protection Against Repeated Authentication Attempts
 
-**Status:** Confirmed
+| Field | Value |
+| --- | --- |
+| Status | Confirmed |
+| CWE | CWE-307: Improper Restriction of Excessive Authentication Attempts |
+| OWASP Top 10 | A07:2025 Authentication Failures |
 
 ## Summary
 
