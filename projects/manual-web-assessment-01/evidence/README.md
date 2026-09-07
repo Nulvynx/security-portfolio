@@ -2,7 +2,7 @@
 
 This directory contains sanitized technical reconstructions of the validation logic used for each confirmed finding.
 
-The examples preserve the relevant HTTP behavior and security boundary while replacing original paths, identifiers, account data, session material, payload values, response content, and other environment-specific details.
+The examples preserve the relevant request method, transport shape, security boundary, controlled modification, and observed result where those details are important to understanding the finding. Original paths, parameter names, account data, credentials, session material, payload values, response content, and other environment-specific details are replaced or generalized.
 
 They are intended to show how each finding was technically confirmed without exposing the original assessment environment.
 
