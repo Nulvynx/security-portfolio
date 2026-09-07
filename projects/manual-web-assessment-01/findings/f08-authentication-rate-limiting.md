@@ -20,6 +20,10 @@ The public version omits the original endpoint, account identifiers, request tim
 
 A sequence of repeated authentication attempts was submitted against the affected flow and the application response was observed for throttling, delay, lockout, or equivalent protective behavior. The tested sequence did not trigger an effective control sufficient to prevent continued attempts.
 
+## Evidence
+
+[Review the sanitized HTTP validation](../evidence/f08-validation.md).
+
 ## Impact
 
 Insufficient protection against repeated authentication attempts can increase exposure to password guessing and credential-stuffing activity. Practical risk depends on password quality, credential reuse, account enumeration behavior, monitoring, and other authentication controls.

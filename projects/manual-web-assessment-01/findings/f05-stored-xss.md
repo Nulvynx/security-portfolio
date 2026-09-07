@@ -20,6 +20,10 @@ The public version omits the original input location, payload, affected page, id
 
 A controlled payload was submitted through the affected input path, stored by the application, and later rendered in the relevant browser context. Execution occurred when the stored content was viewed, confirming persistence and execution rather than reflected behavior.
 
+## Evidence
+
+[Review the sanitized HTTP validation](../evidence/f05-validation.md).
+
 ## Impact
 
 Stored XSS can allow attacker-controlled script execution in the browser context of users who view the affected content. Depending on application functionality and browser-accessible data, this can enable unauthorized actions or access to sensitive information available to the affected session.

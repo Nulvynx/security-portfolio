@@ -20,6 +20,10 @@ The public version omits original session values, endpoint details, cookies, and
 
 The session was established through normal authentication, the logout flow was completed, and the previously issued session credential was then reused against authenticated functionality. Access remained possible, confirming ineffective session revocation.
 
+## Evidence
+
+[Review the sanitized HTTP validation](../evidence/f02-validation.md).
+
 ## Impact
 
 If a valid session credential is copied or otherwise obtained, logout may not terminate the attacker's ability to use that credential. This weakens user expectations around session termination and can extend the useful lifetime of a compromised session.

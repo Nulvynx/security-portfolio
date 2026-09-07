@@ -20,6 +20,10 @@ The public version does not reproduce the original endpoint, response body, prod
 
 The endpoint was requested directly and returned diagnostic content without the level of restriction expected for non-user-facing functionality.
 
+## Evidence
+
+[Review the sanitized HTTP validation](../evidence/f04-validation.md).
+
 ## Impact
 
 The primary risk is information exposure and unnecessary expansion of the application's observable attack surface. The practical impact depends on the sensitivity of the diagnostic data returned by the endpoint.

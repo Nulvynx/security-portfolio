@@ -20,6 +20,10 @@ The public version intentionally omits the original artifact format, request str
 
 A valid authentication exchange was first completed and the relevant client-supplied authentication material was captured. The same material was then replayed in a subsequent request without performing a new authentication step. The application accepted the replayed value and reproduced the authenticated behavior.
 
+## Evidence
+
+[Review the sanitized HTTP validation](../evidence/f07-validation.md).
+
 ## Impact
 
 If an attacker obtains the reusable authentication artifact, they may be able to authenticate by replaying it rather than supplying the user's original secret or completing the expected authentication flow. The practical risk depends on the artifact lifetime, transport protections, and conditions under which it can be obtained.

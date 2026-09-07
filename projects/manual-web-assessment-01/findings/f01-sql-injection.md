@@ -20,6 +20,10 @@ The public version intentionally omits the original parameter names, endpoint de
 
 The issue was validated by establishing normal application behavior and comparing it with responses produced by controlled boolean conditions. The result was treated as confirmed only after the behavior was repeatable.
 
+## Evidence
+
+[Review the sanitized HTTP validation](../evidence/f01-validation.md).
+
 ## Impact
 
 Successful exploitation can allow an attacker to manipulate database query logic. The exact impact depends on the affected query, database permissions, and reachable data paths.

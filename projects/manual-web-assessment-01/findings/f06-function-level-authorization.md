@@ -20,6 +20,10 @@ The public version omits the original function name, endpoint, account roles, id
 
 The expected authorization boundary was first established using the application workflow. The restricted function was then requested directly while preserving a lower-privileged authenticated session. The application processed the request instead of enforcing the intended function-level restriction.
 
+## Evidence
+
+[Review the sanitized HTTP validation](../evidence/f06-validation.md).
+
 ## Impact
 
 Successful exploitation can allow a user to perform actions outside the privileges assigned to their account. The resulting impact depends on the capability exposed by the affected function and the data or state it can modify.

@@ -20,6 +20,10 @@ The public version uses neutral terminology and omits original identifiers, acco
 
 A legitimate request was first established for an object available to the authenticated test account. The object reference was then changed while preserving the same authenticated session. The application returned an object outside the expected authorization boundary, confirming the access-control failure.
 
+## Evidence
+
+[Review the sanitized HTTP validation](../evidence/f03-validation.md).
+
 ## Impact
 
 Successful exploitation allows an authenticated user to access resources that should be restricted to another authorization context. The resulting impact depends on the sensitivity and operations exposed by the affected object.
