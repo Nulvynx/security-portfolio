@@ -36,9 +36,11 @@ Testing then used a baseline-and-modification approach: expected behavior was es
 
 Confirmed findings were documented with technical explanation, validation steps, impact analysis, remediation guidance, and retest criteria.
 
-## Risk Rating
+## Risk Classification
 
-Risk scoring is context-dependent. This public version does not assign or infer numeric CVSS scores from vulnerability class alone. Where environment-specific assumptions required for accurate scoring are intentionally excluded from the public record, the finding remains classified by its confirmed technical behavior, CWE, and OWASP Top 10 category.
+Each public finding is classified by its confirmed technical behavior together with the applicable CWE and OWASP Top 10 category.
+
+Numeric severity and CVSS scores are not inferred from vulnerability class alone. Where accurate scoring depends on environment-specific assumptions that are intentionally excluded from the public record, the sanitized portfolio version omits the numeric score rather than presenting unsupported precision.
 
 ## Findings Summary
 
