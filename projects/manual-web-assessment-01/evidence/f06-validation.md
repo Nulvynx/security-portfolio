@@ -1,29 +1,23 @@
 # F-06 Technical Validation
 
-> Sanitized reconstruction. The original privileged function, role names, identifiers, and response content are replaced with neutral examples.
+> Sanitized reconstruction. The original privileged route, action names, role labels, session material, and response content are replaced. The direct form-based invocation from a lower-privileged context reflects the confirmed test.
 
 ## Expected privilege boundary
 
-The application workflow indicated that the tested action was intended for a more privileged authorization context.
+The application workflow indicated that the tested function was intended for a privileged authorization context.
 
-## Direct invocation from a lower-privileged session
+## Direct invocation from a lower-privileged state
 
 ```http
-POST /admin/action HTTP/1.1
+POST /?[privileged-function] HTTP/1.1
 Host: app.example.test
-Cookie: session=[lower-privileged-session]
-Content-Type: application/json
+Content-Type: application/x-www-form-urlencoded
 
-{"resource_id":1001,"action":"update"}
+action=privileged&state=[lower-privileged-state]
 ```
 
-```http
-HTTP/1.1 200 OK
-Content-Type: application/json
-
-{"status":"completed"}
-```
+The backend returned the restricted administrative functionality instead of rejecting the lower-privileged caller.
 
 ## Security conclusion
 
-The backend processed a restricted function while the caller remained authenticated in a lower-privileged context. The weakness resulted from missing server-side function-level authorization.
+The caller remained authenticated in a lower-privileged context while the server exposed a restricted function. The weakness therefore resulted from missing server-side function-level authorization rather than only from hidden navigation or user-interface controls.
