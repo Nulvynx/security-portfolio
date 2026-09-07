@@ -6,7 +6,7 @@ A manual grey-box security assessment was performed against an explicitly author
 
 Eight security findings were confirmed. The most important recurring themes were weaknesses in server-side authorization enforcement, authentication and session lifecycle controls, untrusted input handling, and exposure of functionality that should have been more tightly restricted.
 
-The public version of this report is intentionally sanitized and excludes any information that could identify the original organization or environment.
+The public version of this report is intentionally sanitized and excludes information that could identify the original organization or environment.
 
 ## Assessment Overview
 
@@ -40,8 +40,6 @@ Confirmed findings were documented with technical explanation, validation steps,
 
 Risk scoring is context-dependent. This public version does not assign or infer numeric CVSS scores from vulnerability class alone. Where environment-specific assumptions required for accurate scoring are intentionally excluded from the public record, the finding remains classified by its confirmed technical behavior, CWE, and OWASP Top 10 category.
 
-This avoids presenting a precise numeric score that cannot be independently justified from the sanitized material.
-
 ## Findings Summary
 
 | ID | Finding |
@@ -69,6 +67,12 @@ Detailed technical descriptions are maintained as individual finding documents s
 - [F-06 Missing Function-Level Authorization](../findings/f06-function-level-authorization.md)
 - [F-07 Authentication Replay](../findings/f07-authentication-replay.md)
 - [F-08 Insufficient Protection Against Repeated Authentication Attempts](../findings/f08-authentication-rate-limiting.md)
+
+## Technical Evidence
+
+Sanitized HTTP-level reconstructions are maintained separately from the finding narratives so that the report stays readable while technical reviewers can inspect the validation logic.
+
+[Review the technical evidence index](../evidence/README.md).
 
 ## Remediation Priorities
 
@@ -98,6 +102,6 @@ Relevant finding: F-04.
 
 ## Conclusion
 
-The assessment identified multiple confirmed weaknesses across independent application security controls. The findings show that remediation should address not only individual vulnerable requests but also the broader control patterns behind them, particularly authorization enforcement, authentication state management, and safe handling of untrusted input.
+The assessment identified multiple confirmed weaknesses across independent application security controls. Remediation should address not only individual vulnerable requests but also the broader control patterns behind them, particularly authorization enforcement, authentication state management, and safe handling of untrusted input.
 
 A retest should verify both the originally affected functionality and comparable application paths that rely on the same security controls.

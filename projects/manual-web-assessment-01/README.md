@@ -26,26 +26,15 @@ All public material in this project is sanitized. Original organization names, d
 
 The assessment covered the authorized web application and the functionality available through the provided test access.
 
-Security testing included:
-
-- authentication flows
-- session lifecycle controls
-- object-level authorization
-- function-level authorization
-- user-controlled input handling
-- exposed application functionality
-- repeated authentication attempts
-- application security configuration relevant to the accessible attack surface
+Security testing included authentication flows, session lifecycle controls, object-level and function-level authorization, user-controlled input handling, exposed application functionality, repeated authentication attempts, and security configuration relevant to the accessible attack surface.
 
 Destructive testing and activities outside the authorized target were not performed.
 
 ## Methodology
 
-The application was first mapped to establish the accessible functionality, trust boundaries, authentication state, user-controlled inputs, and security-relevant workflows.
+The application was first mapped to establish accessible functionality, trust boundaries, authentication state, user-controlled inputs, and security-relevant workflows.
 
 Testing then focused on establishing expected application behavior and deliberately modifying security-relevant inputs or request context to validate whether controls were enforced server-side. Potential issues were treated as hypotheses until reproducible behavior confirmed a security impact.
-
-Confirmed findings were documented with impact analysis, remediation guidance, and retest considerations. Environment-specific proof material is published only where it can be sanitized without weakening confidentiality.
 
 ## Key Findings
 
@@ -62,19 +51,17 @@ Confirmed findings were documented with impact analysis, remediation guidance, a
 
 CWE and OWASP Top 10 mappings are documented in each finding and summarized in the [classification mapping](findings/classification.md).
 
-Numeric severity and CVSS scores are not inferred from vulnerability names. They are included in public material only when the underlying scoring rationale can be reproduced without relying on confidential environment-specific assumptions.
+Numeric severity and CVSS scores are not inferred from vulnerability names. They are included in public material only when the scoring rationale can be reproduced without relying on confidential environment-specific assumptions.
+
+## Technical Evidence
+
+Each finding is supported by a sanitized HTTP-level reconstruction showing the relevant baseline, controlled change, and observed security result. These examples preserve the validation logic while replacing identifying values from the original environment.
+
+[Review technical evidence](evidence/README.md).
 
 ## Security Themes
 
-The confirmed findings affected several distinct control areas, with recurring themes around:
-
-- server-side authorization enforcement
-- authentication and session lifecycle controls
-- safe handling of untrusted input
-- exposure of diagnostic functionality
-- protection against repeated authentication attempts
-
-The assessment therefore demonstrated the importance of addressing both individual vulnerabilities and the underlying security controls that allow related weaknesses to occur.
+The confirmed findings affected several distinct control areas, with recurring themes around server-side authorization enforcement, authentication and session lifecycle controls, safe handling of untrusted input, exposure of diagnostic functionality, and protection against repeated authentication attempts.
 
 ## Skills Demonstrated
 
@@ -92,6 +79,6 @@ The assessment therefore demonstrated the importance of addressing both individu
 
 ## Report
 
-A sanitized penetration test report accompanies this project. The public report is derived from the assessment material and excludes information that could identify the original environment.
+A sanitized penetration test report accompanies this project and excludes information that could identify the original environment.
 
 [Read the sample penetration test report](report/report.md).
