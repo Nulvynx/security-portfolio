@@ -23,9 +23,9 @@ The assessment resulted in eight confirmed security findings, including:
 - Authentication replay
 - Insufficient protection against repeated authentication attempts
 
-The project includes a concise assessment case study, individual technical findings with CWE and OWASP classification, and a sanitized sample penetration test report.
+The project includes a concise assessment case study, individual technical findings with CWE and OWASP classification, sanitized HTTP-level validation evidence, and a sample penetration test report.
 
-[View assessment](projects/manual-web-assessment-01/README.md) · [Technical findings](projects/manual-web-assessment-01/findings/) · [Sample report](projects/manual-web-assessment-01/report/report.md)
+[View assessment](projects/manual-web-assessment-01/README.md) · [Technical findings](projects/manual-web-assessment-01/findings/) · [Technical evidence](projects/manual-web-assessment-01/evidence/) · [Sample report](projects/manual-web-assessment-01/report/report.md)
 
 ## What This Portfolio Demonstrates
 
@@ -47,16 +47,15 @@ Projects focus on the parts of security assessments that matter in real engageme
 
 Confirmed findings, observations, negative results, hypotheses, and testing limitations are treated separately where relevant.
 
-## Areas of Focus
+## Demonstrated Areas
 
-Current work is primarily focused on:
+The work currently published in this repository demonstrates:
 
 - Web Application Security
-- API Security
-- Authentication and Authorization
-- Application Security
-- Secure Code Review
-- Vulnerability Assessment
+- Authentication and Session Security
+- Authorization Testing
+- Injection and Untrusted Input Handling
+- Vulnerability Validation
 - Penetration Testing Methodology
 - Security Reporting
 

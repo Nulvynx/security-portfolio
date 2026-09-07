@@ -55,7 +55,7 @@ Numeric severity and CVSS scores are not inferred from vulnerability names. They
 
 ## Technical Evidence
 
-Each finding is supported by a sanitized HTTP-level reconstruction showing the relevant baseline, controlled change, and observed security result. These examples preserve the validation logic while replacing identifying values from the original environment.
+Each finding is supported by a sanitized HTTP-level reconstruction showing the relevant baseline, controlled change, and observed security result. The reconstructions preserve the request method, security boundary, and validation sequence where those details matter, while replacing identifying paths, parameter names, credentials, session values, and response data.
 
 [Review technical evidence](evidence/README.md).
 
@@ -82,3 +82,7 @@ The confirmed findings affected several distinct control areas, with recurring t
 A sanitized penetration test report accompanies this project and excludes information that could identify the original environment.
 
 [Read the sample penetration test report](report/report.md).
+
+## Tooling
+
+**Burp Suite Community Edition** was used for manual HTTP interception, request history analysis, replay, and controlled request modification through Proxy and Repeater. A standard web browser was used to exercise application workflows and confirm browser-side behavior where relevant.

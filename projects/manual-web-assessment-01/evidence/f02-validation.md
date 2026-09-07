@@ -1,45 +1,45 @@
 # F-02 Technical Validation
 
-> Sanitized reconstruction. Session values, paths, and response data are neutralized and do not reproduce the original target environment.
+> Sanitized reconstruction. Original routes, parameter names, session values, and response content are replaced. The session credential remained client-supplied in the request body, matching the tested session flow.
 
 ## Authenticated baseline
 
 ```http
-GET /account HTTP/1.1
+POST /?object=1 HTTP/1.1
 Host: app.example.test
-Cookie: session=[captured-session]
+Content-Type: application/x-www-form-urlencoded
+
+action=detail&state=[captured-pre-logout-state]
 ```
 
-```http
-HTTP/1.1 200 OK
-
-[authenticated account content]
-```
+The application returned authenticated content.
 
 ## Logout
 
 ```http
-POST /logout HTTP/1.1
+POST / HTTP/1.1
 Host: app.example.test
-Cookie: session=[captured-session]
+Content-Type: application/x-www-form-urlencoded
+
+action=logout&state=[captured-pre-logout-state]
 ```
 
-The normal logout flow completed successfully.
+The normal logout flow completed.
 
-## Reuse of the pre-logout session
+## Reuse of the pre-logout state
+
+The same previously issued state value was then reused against authenticated functionality:
 
 ```http
-GET /account HTTP/1.1
+POST /?object=1 HTTP/1.1
 Host: app.example.test
-Cookie: session=[captured-session]
+Content-Type: application/x-www-form-urlencoded
+
+action=detail&state=[captured-pre-logout-state]
 ```
 
-```http
-HTTP/1.1 200 OK
-
-[authenticated account content]
-```
+The application again returned authenticated content instead of rejecting the pre-logout credential.
 
 ## Security conclusion
 
-The same session credential remained accepted after logout, demonstrating ineffective server-side revocation.
+The same session-state credential remained accepted after logout, demonstrating ineffective session revocation rather than only a client-side logout presentation issue.
