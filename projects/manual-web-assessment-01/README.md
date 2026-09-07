@@ -45,7 +45,7 @@ The application was first mapped to establish the accessible functionality, trus
 
 Testing then focused on establishing expected application behavior and deliberately modifying security-relevant inputs or request context to validate whether controls were enforced server-side. Potential issues were treated as hypotheses until reproducible behavior confirmed a security impact.
 
-Confirmed findings were documented with supporting evidence, impact analysis, remediation guidance, and retest considerations.
+Confirmed findings were documented with impact analysis, remediation guidance, and retest considerations. Environment-specific proof material is published only where it can be sanitized without weakening confidentiality.
 
 ## Key Findings
 
@@ -60,7 +60,9 @@ Confirmed findings were documented with supporting evidence, impact analysis, re
 | F-07 | [Authentication Replay](findings/f07-authentication-replay.md) |
 | F-08 | [Insufficient Protection Against Repeated Authentication Attempts](findings/f08-authentication-rate-limiting.md) |
 
-Severity and CVSS data are published only after the original assessment values and scoring rationale have been reviewed for technical consistency.
+CWE and OWASP Top 10 mappings are documented in each finding and summarized in the [classification mapping](findings/classification.md).
+
+Numeric severity and CVSS scores are not inferred from vulnerability names. They are included in public material only when the underlying scoring rationale can be reproduced without relying on confidential environment-specific assumptions.
 
 ## Security Themes
 
@@ -92,4 +94,4 @@ The assessment therefore demonstrated the importance of addressing both individu
 
 A sanitized penetration test report accompanies this project. The public report is derived from the assessment material and excludes information that could identify the original environment.
 
-See the [report directory](report/).
+[Read the sample penetration test report](report/report.md).

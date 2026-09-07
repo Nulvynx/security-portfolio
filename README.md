@@ -2,7 +2,7 @@
 
 Practical portfolio focused on penetration testing, application security, security assessment methodology, and technical reporting.
 
-The work published here demonstrates the assessment process from application mapping and security hypotheses through manual validation, evidence collection, risk assessment, remediation, and reporting.
+The work published here demonstrates the assessment process from application mapping and security hypotheses through manual validation, evidence collection, risk analysis, remediation, and reporting.
 
 ## Selected Work
 
@@ -23,9 +23,9 @@ The assessment resulted in eight confirmed security findings, including:
 - Authentication replay
 - Insufficient protection against repeated authentication attempts
 
-The project includes a concise assessment case study, individual technical findings, sanitized evidence where useful, and a sample penetration test report.
+The project includes a concise assessment case study, individual technical findings with CWE and OWASP classification, and a sanitized sample penetration test report.
 
-[View assessment](projects/manual-web-assessment-01/README.md) · [Technical findings](projects/manual-web-assessment-01/findings/) · [Report](projects/manual-web-assessment-01/report/)
+[View assessment](projects/manual-web-assessment-01/README.md) · [Technical findings](projects/manual-web-assessment-01/findings/) · [Sample report](projects/manual-web-assessment-01/report/report.md)
 
 ## What This Portfolio Demonstrates
 
@@ -40,7 +40,7 @@ Projects focus on the parts of security assessments that matter in real engageme
 - evidence collection
 - root cause analysis
 - CWE and OWASP classification
-- risk and CVSS assessment
+- risk assessment
 - remediation design
 - retest planning
 - technical and executive reporting

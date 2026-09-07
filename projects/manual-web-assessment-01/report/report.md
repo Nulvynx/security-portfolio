@@ -38,9 +38,9 @@ Confirmed findings were documented with technical explanation, validation steps,
 
 ## Risk Rating
 
-Severity and CVSS values are intentionally not reproduced in this public version until the original scoring rationale has been reviewed for consistency. No score is inferred from the vulnerability class alone.
+Risk scoring is context-dependent. This public version does not assign or infer numeric CVSS scores from vulnerability class alone. Where environment-specific assumptions required for accurate scoring are intentionally excluded from the public record, the finding remains classified by its confirmed technical behavior, CWE, and OWASP Top 10 category.
 
-The final public classification will consider exploitability, required access, demonstrated impact, affected security boundary, and the context of the assessed functionality.
+This avoids presenting a precise numeric score that cannot be independently justified from the sanitized material.
 
 ## Findings Summary
 
@@ -54,6 +54,8 @@ The final public classification will consider exploitability, required access, d
 | F-06 | [Missing Function-Level Authorization](../findings/f06-function-level-authorization.md) |
 | F-07 | [Authentication Replay](../findings/f07-authentication-replay.md) |
 | F-08 | [Insufficient Protection Against Repeated Authentication Attempts](../findings/f08-authentication-rate-limiting.md) |
+
+See the [finding classification mapping](../findings/classification.md) for CWE and OWASP Top 10:2025 mappings.
 
 ## Detailed Findings
 
